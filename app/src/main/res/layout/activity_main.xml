@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/article_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#D33025"
+        android:textColor="@android:color/holo_orange_light"
+        android:textColorHighlight="#DC8C87"
+        android:padding="15dp"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textStyle="bold"
+        android:text="@string/article_title"/>
+
+    <LinearLayout
+        android:layout_width="480dp"
+        android:layout_height="670dp"
+        android:orientation="vertical">
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@id/article_subheading"
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/article_subheading"
+            android:fadeScrollbars="false"
+            android:scrollbarStyle="insideInset"
+            android:scrollbarThumbVertical ="@drawable/scrollview_thumb"
+            android:scrollbarTrackVertical ="@drawable/vertical_scrollview_track">
+        </ScrollView>
+
+
+        <TextView
+            android:id="@+id/article_subheading"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:layout_below="@id/article_heading"
+            android:background="#732081"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="60dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/article_subtitle"
+            android:textAppearance="@android:style/TextAppearance"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/article"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@id/article_subheading"
+            android:layout_gravity="center_horizontal"
+            android:autoLink="web"
+            android:background="@color/purple_200"
+            android:fontFamily="sans-serif-medium"
+            android:lineSpacingExtra="5sp"
+            android:maxWidth="410dp"
+            android:maxHeight="450dp"
+            android:text="@string/article_text" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:onClick="showToast"
+        android:text="Thanks From Us"
+        android:textColor="@color/black"
+        android:layout_marginTop="670dp"/>
+</RelativeLayout>
